@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Product page</title>
+</head>
+<body>
+  <h1 id="name">Product name</h1>
+  <img id="image" src="productImage" alt="ProductImage" width="500" height="600">
+  <h3 id="category">Product category</h3>
+  <h3 id="product-id">Product id</h3>
+  <h3 id="price">Product id</h3>
+  <h3 id="description">Product id</h3>
+</body>
+<script>
+  var url = new URL(document.URL);
+  var search_params = url.searchParams;
+
+  var id = search_params.get('id');
+
+  $.ajax({
+        url: "http://localhost:8000/products/" + id,
+        type: 'GET',
+        dataType: 'json', // added data type
+        success: function(res) {
+            $("#name").html("Product name: " + res.name);
+            $("#image").attr("src", res.img);
+            $("#category").html("Product category: " + res.category);
+            $("#product-id").html("Product id: " + res.id);
+            $("#price").html("Product price: $" + res.price);
+            $("#description").html("Product price: $" + res.description);
+        }
+    });
+</script>
+</html>

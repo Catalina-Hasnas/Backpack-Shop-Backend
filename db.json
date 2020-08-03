@@ -1,0 +1,31 @@
+{
+    "products" : [
+        {
+            "id": 1,
+            "name": "Rucsac 1",
+            "category": "rucsacuri",
+            "type": "etno",
+            "img": "../images/items/etnotransform/2.jpg",
+            "price": 200,
+            "description": "Some description"
+        },
+        {
+            "id": 2,
+            "name": "Rucsac 2 My love",
+            "category": "rucsacuri",
+            "type": "etno",
+            "img": "https://i.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U",
+            "price": 200,
+            "description": "Some description"
+        },
+        {
+            "id": 3,
+            "name": "Rucsac 3",
+            "category": "rucsacuri",
+            "type": "etno",
+            "img": "https://i.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U",
+            "price": 200,
+            "description": "Some description"
+        }
+    ]
+}
