@@ -18,20 +18,28 @@
   var url = new URL(document.URL);
   var search_params = url.searchParams;
 
-  var id = search_params.get('id');
-
-  $.ajax({
-        url: "http://localhost:8000/products/" + id,
-        type: 'GET',
-        dataType: 'json', // added data type
-        success: function(res) {
-            $("#name").html("Product name: " + res.name);
-            $("#image").attr("src", res.img);
-            $("#category").html("Product category: " + res.category);
-            $("#product-id").html("Product id: " + res.id);
-            $("#price").html("Product price: $" + res.price);
-            $("#description").html("Product price: $" + res.description);
-        }
-    });
+  if(!search_params.has("id")) {
+    console.log("no ID found");
+  } else {
+    var id = search_params.get('id');
+  
+    $.ajax({
+          url: "http://localhost:8000/products/" + id,
+          type: 'GET',
+          dataType: 'json', // added data type
+          success: function(res) {
+            if(res.error != true) {
+              $("#name").html("Product name: " + res.name);
+              $("#image").attr("src", res.img);
+              $("#category").html("Product category: " + res.category);
+              $("#product-id").html("Product id: " + res.id);
+              $("#price").html("Product price: $" + res.price);
+              $("#description").html("Product price: $" + res.description);
+            } else {
+              console.log("no product exists with id: " + id);
+            }
+          }
+      });
+  }
 </script>
 </html>

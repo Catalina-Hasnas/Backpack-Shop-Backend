@@ -39,7 +39,7 @@ app.get('/products/:id', (req, res) => {
   if(order){
     res.send(order);
   }
-  res.send({error: "Product with id: " + req.params.id + " not found"});
+  res.send({error: true, message: "Product with id: " + req.params.id + " not found"});
 });
 
 app.post('/products/new', (req, res) => {
@@ -48,11 +48,14 @@ app.post('/products/new', (req, res) => {
   let order = {
     "id": uuid.v4(),
     "name": req.body.name,
-    "category": req.body.category,
-    "type": req.body.type,
     "img": req.body.img,
     "price": req.body.price,
-    "description": req.body.description
+    "discount": req.body.discount,
+    "description": req.body.description,
+    "material" : req.body.material,
+    "color" : req.body.color,
+    "category": req.body.category,
+    "type": req.body.type
   }
   db.set('products', order);
   res.status(200).json(order);
