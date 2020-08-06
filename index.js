@@ -72,7 +72,7 @@ app.get('/orders/:id', (req, res) => {
   if(order){
     res.send(order);
   }
-  res.send({error: true, message: "Order with id: " + req.params.id + " not found"});
+  res.status(404).send({error: true, message: "Order with id: " + req.params.id + " not found"});
 });
 
 app.post('/orders/new', (req, res) => {
@@ -100,6 +100,21 @@ app.post('/orders/addProduct', (req, res) => {
         "productId" : req.body.productId,
         "quantity" : req.body.quantity
       });
+    }
+    db.set('orders', order);
+    res.status(200).json(order);
+  }
+  res.send({error: true, message: "Order with id: " + req.body.id + " not found"});
+});
+
+app.post('/orders/removeProduct', (req, res) => {
+  let order = db.get("orders").find(order => order.id == req.body.orderId);
+
+  if(order){
+    db.pop('orders', order);
+    productIndex = order.products.findIndex(product => product.productId == req.body.productId);
+    if(productIndex > -1) {
+      order.products.splice(productIndex, 1);
     }
     db.set('orders', order);
     res.status(200).json(order);
