@@ -1,85 +1,163 @@
 {
-  "products": [
-    {
-      "id": "1",
-      "name": "Transformer backpack",
-      "img": [
-        "../images/items/etnotransform/1.jpg",
-        "../images/items/etnotransform/2.jpg",
-        "../images/items/etnotransform/3.jpg"
-      ],
-      "price": 200,
-      "discount": 0,
-      "description": "Some description",
-      "material": "linen",
-      "color": "brown",
-      "category": "backpacks",
-      "type": "etno"
-    },
-    {
-      "id": "2",
-      "name": "Etno blue backpack",
-      "img": [
-        "../images/items/etnoblue/16.jpg",
-        "../images/items/etnoblue/11.jpg",
-        "../images/items/etnoblue/12.jpg",
-        "../images/items/etnoblue/15.jpg"
-      ],
-      "price": 250,
-      "discount": 20,
-      "description": "Some description",
-      "material": "linen",
-      "color": "white",
-      "category": "backpacks",
-      "type": "etno"
-    },
-    {
-      "id": "3",
-      "name": "Etno red backpack",
-      "img": [
-        "../images/items/etnored/21.jpg",
-        "../images/items/etnored/24.jpg",
-        "../images/items/etnored/26.jpg"
-      ],
-      "price": 120,
-      "discount": 0,
-      "description": "Some description",
-      "material": "linen",
-      "color": "white",
-      "category": "backpacks",
-      "type": "etno"
-    }
-  ],
-  "orders": [
-    {
-      "id": "01",
-      "products": [
-        {
-          "productId": "1",
-          "quantity": "1"
-        },
-        {
-          "productId": "2",
-          "quantity": "1"
-        }
-      ]
-    },
-    {
-      "id": "02",
-      "products": [
-        {
-          "productId": "2",
-          "quantity": "1"
-        },
-        {
-          "productId": "1",
-          "quantity": "1"
-        },
-        {
-          "productId": "3",
-          "quantity": "1"
-        }
-      ]
-    }
-  ]
-}
+    "products": [
+      {
+        "id": "1",
+        "name": "Transformer backpack",
+        "img": [
+          "../images/items/etnotransform/1.jpg",
+          "../images/items/etnotransform/2.jpg",
+          "../images/items/etnotransform/3.jpg"
+        ],
+        "price": 200,
+        "discount": 0,
+        "description": "Rucsac din in mai dur, in culoarea naturala a inului. Se poate transforma în rucsac sau geantă pe un singur umăr în funcție de necesitate. Sfoara din bumbac este moale și confortabilă pentru piele.",
+        "material": "linen",
+        "color": "brown",
+        "category": "backpacks",
+        "type": "etno"
+      },
+      {
+        "id": "2",
+        "name": "Etno blue backpack",
+        "img": [
+          "../images/items/etnoblue/16.jpg",
+          "../images/items/etnoblue/11.jpg",
+          "../images/items/etnoblue/12.jpg",
+          "../images/items/etnoblue/15.jpg"
+        ],
+        "price": 120,
+        "discount": 20,
+        "description": "Rucsacul este din 100% in în exterior, cu căptușeală dublă din bumbac pentru mai multă durabilitate. Sfoara este din bumbac, moale și lată pentru maximum de confort la piele. Țesătura de in este perfectă pentru sezonul cald și cea mai potrivită pentru piele. Oferă o senzație de răcoare și absoarbe bine umezeala.",
+        "material": "linen",
+        "color": "white",
+        "category": "backpacks",
+        "type": "etno"
+      },
+      {
+        "id": "3",
+        "name": "Etno red backpack",
+        "img": [
+          "../images/items/etnored/21.jpg",
+          "../images/items/etnored/24.jpg",
+          "../images/items/etnored/26.jpg"
+        ],
+        "price": 120,
+        "discount": 0,
+        "description": "Rucsacul este din 100% in în exterior, cu căptușeală dublă din bumbac pentru mai multă durabilitate. Sfoara este din bumbac, moale și lată pentru maximum de confort la piele. Țesătura de in este perfectă pentru sezonul cald și cea mai potrivită pentru piele. Oferă o senzație de răcoare și absoarbe bine umezeala.",
+        "material": "linen",
+        "color": "white",
+        "category": "backpacks",
+        "type": "etno"
+      },
+      {
+        "id": "4",
+        "name": "Elegant backpack",
+        "img": [
+          "../images/items/elegant/1.jpg",
+          "../images/items/elegant/2.jpg",
+          "../images/items/elegant/3.jpg"
+        ],
+        "price": 220,
+        "discount": 10,
+        "description": "Rucsacul este din 100% in în exterior, cu căptușeală dublă din bumbac pentru mai multă durabilitate. Ornamentat cu dantelă naturală. Țesătura de in este perfectă pentru sezonul cald și cea mai potrivită pentru piele. Oferă o senzație de răcoare și absoarbe bine umezeala.",
+        "material": "linen",
+        "color": "white",
+        "category": "backpacks",
+        "type": "elegant"
+      },
+      {
+        "id": "5",
+        "name": "Ancora backpack",
+        "img": [
+          "../images/items/sport/1.png",
+          "../images/items/sport/2.png",
+          "../images/items/sport/3.png"
+        ],
+        "price": 220,
+        "discount": 10,
+        "description": "Rucsacul este impermeabil, din 100% poliester reciclat în exterior, cu căptușeală dublă din bumbac pentru mai multă durabilitate. Perfect pentru sport și drumeții.",
+        "material": "polyester",
+        "color": "blue",
+        "category": "backpacks",
+        "type": "sport"    
+      },
+      {
+        "id": "6",
+        "name": "Traian backpack",
+        "img": [
+          "../images/items/sport/10.jpg",
+          "../images/items/sport/11.jpg",
+          "../images/items/sport/12.ppg",
+          "../images/items/sport/13.jpg",
+          "../images/items/sport/14.jpg"
+        ],
+        "price": 220,
+        "discount": 10,
+        "description": "Rucsacul este impermeabil, din 100% poliester reciclat în exterior, cu căptușeală dublă din bumbac pentru mai multă durabilitate. Perfect pentru sport și drumeții.",
+        "material": "polyester",
+        "color": "grey",
+        "category": "backpacks",
+        "type": "sport"      
+      },
+      {
+        "id": "7",
+        "name": "White hemp dress",
+        "img": [
+          "../images/items/others/1.jpg"
+        ],
+        "price": 220,
+        "discount": 10,
+        "description": "Woman white hemp dress.",
+        "material": "hemp",
+        "color": "white",
+        "category": "others",
+        "type": "others"        
+      },
+      {
+        "id": "8",
+        "name": "Black hemp dress",
+        "img": [
+          "../images/items/others/2.png"
+        ],
+        "price": 220,
+        "discount": 10,
+        "description": "Woman black hemp dress.",
+        "material": "hemp",
+        "color": "white",
+        "category": "others",
+        "type": "others"        
+      }
+    ],
+    "orders": [
+      {
+        "id": "01",
+        "products": [
+          {
+            "productId": "1",
+            "quantity": "1"
+          },
+          {
+            "productId": "2",
+            "quantity": "1"
+          }
+        ]
+      },
+      {
+        "id": "02",
+        "products": [
+          {
+            "productId": "2",
+            "quantity": "1"
+          },
+          {
+            "productId": "1",
+            "quantity": "1"
+          },
+          {
+            "productId": "3",
+            "quantity": "1"
+          }
+        ]
+      }
+    ]
+  }
