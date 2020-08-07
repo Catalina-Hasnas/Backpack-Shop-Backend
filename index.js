@@ -104,7 +104,7 @@ app.post('/orders/addProduct', (req, res) => {
     db.set('orders', order);
     res.status(200).json(order);
   }
-  res.send({error: true, message: "Order with id: " + req.body.id + " not found"});
+  res.status(404).send({error: true, message: "Order with id: " + req.body.id + " not found"});
 });
 
 app.post('/orders/removeProduct', (req, res) => {
@@ -119,7 +119,7 @@ app.post('/orders/removeProduct', (req, res) => {
     db.set('orders', order);
     res.status(200).json(order);
   }
-  res.send({error: true, message: "Order with id: " + req.body.id + " not found"});
+  res.status(300).send({error: true, message: "Order with id: " + req.body.id + " not found"});
 });
 
 app.listen(8000, () => {
