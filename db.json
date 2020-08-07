@@ -1,1 +1,85 @@
-{"products":[{"id":"1","name":"Transformer backpack","img":["../images/items/etnotransform/1.jpg","../images/items/etnotransform/2.jpg","../images/items/etnotransform/3.jpg"],"price":200,"discount":0,"description":"Some description","material":"linen","color":"brown","category":"backpacks","type":"etno"},{"id":"2","name":"Etno blue backpack","img":["../images/items/etnoblue/16.jpg","../images/items/etnoblue/11.jpg","../images/items/etnoblue/12.jpg","../images/items/etnoblue/15.jpg"],"price":250,"discount":20,"description":"Some description","material":"linen","color":"white","category":"backpacks","type":"etno"},{"id":"3","name":"Etno red backpack","img":["../images/items/etnored/21.jpg","../images/items/etnored/24.jpg","../images/items/etnored/26.jpg"],"price":120,"discount":0,"description":"Some description","material":"linen","color":"white","category":"backpacks","type":"etno"}],"orders":[{"id":"01","products":[{"productId":"1","quantity":"1"},{"productId":"2","quantity":"1"}]},{"id":"01","products":[{"productId":"1","quantity":"1"},{"productId":"2","quantity":"1"}]}]}"id":"02","products":[{"productId":"2","quantity":"1"},{"productId":"1","quantity":"1"},{"productId":"3","quantity":"1"}]}]}
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Transformer backpack",
+      "img": [
+        "../images/items/etnotransform/1.jpg",
+        "../images/items/etnotransform/2.jpg",
+        "../images/items/etnotransform/3.jpg"
+      ],
+      "price": 200,
+      "discount": 0,
+      "description": "Some description",
+      "material": "linen",
+      "color": "brown",
+      "category": "backpacks",
+      "type": "etno"
+    },
+    {
+      "id": "2",
+      "name": "Etno blue backpack",
+      "img": [
+        "../images/items/etnoblue/16.jpg",
+        "../images/items/etnoblue/11.jpg",
+        "../images/items/etnoblue/12.jpg",
+        "../images/items/etnoblue/15.jpg"
+      ],
+      "price": 250,
+      "discount": 20,
+      "description": "Some description",
+      "material": "linen",
+      "color": "white",
+      "category": "backpacks",
+      "type": "etno"
+    },
+    {
+      "id": "3",
+      "name": "Etno red backpack",
+      "img": [
+        "../images/items/etnored/21.jpg",
+        "../images/items/etnored/24.jpg",
+        "../images/items/etnored/26.jpg"
+      ],
+      "price": 120,
+      "discount": 0,
+      "description": "Some description",
+      "material": "linen",
+      "color": "white",
+      "category": "backpacks",
+      "type": "etno"
+    }
+  ],
+  "orders": [
+    {
+      "id": "01",
+      "products": [
+        {
+          "productId": "1",
+          "quantity": "1"
+        },
+        {
+          "productId": "2",
+          "quantity": "1"
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "products": [
+        {
+          "productId": "2",
+          "quantity": "1"
+        },
+        {
+          "productId": "1",
+          "quantity": "1"
+        },
+        {
+          "productId": "3",
+          "quantity": "1"
+        }
+      ]
+    }
+  ]
+}
