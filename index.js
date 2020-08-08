@@ -42,6 +42,22 @@ app.get('/products/:id', (req, res) => {
   res.send({error: true, message: "Product with id: " + req.params.id + " not found"});
 });
 
+app.get('/products/category/:category', (req, res) => {
+  let products = db.get("products").filter(product => product.category == req.params.category);
+  if(products){
+    res.send(products);
+  }
+  res.send({error: true, message: "No products with category: " + req.params.category});
+});
+
+app.get('/products/category/:category/:type', (req, res) => {
+  let products = db.get("products").filter(product => product.category == req.params.category && product.type == req.params.type);
+  if(products){
+    res.send(products);
+  }
+  res.send({error: true, message: "No products with type: " + req.params.type + " and category " + req.params.category});
+});
+
 app.post('/products/new', (req, res) => {
   // Content-Type: application/json; charset=utf-8
   // console.log(req.body);
