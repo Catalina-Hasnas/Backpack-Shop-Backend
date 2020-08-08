@@ -134,11 +134,13 @@
         "products": [
           {
             "productId": "1",
-            "quantity": "1"
+            "quantity": "1",
+            "price": 200
           },
           {
             "productId": "2",
-            "quantity": "1"
+            "quantity": "1",
+            "price": 100
           }
         ]
       },
@@ -147,15 +149,18 @@
         "products": [
           {
             "productId": "2",
-            "quantity": "1"
+            "quantity": "1",
+            "price": 100
           },
           {
             "productId": "1",
-            "quantity": "1"
+            "quantity": "1",
+            "price": 200
           },
           {
             "productId": "3",
-            "quantity": "1"
+            "quantity": "1",
+            "price": 120
           }
         ]
       }

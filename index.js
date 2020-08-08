@@ -109,12 +109,14 @@ app.post('/orders/addProduct', (req, res) => {
     if(productIndex > -1) {
       order.products[productIndex] = {
         "productId" : req.body.productId,
-        "quantity" : req.body.quantity
+        "quantity" : req.body.quantity,
+        "price" : req.body.price
       };
     } else {
       order.products.push({
         "productId" : req.body.productId,
-        "quantity" : req.body.quantity
+        "quantity" : req.body.quantity,
+        "price" : req.body.price
       });
     }
     db.set('orders', order);
