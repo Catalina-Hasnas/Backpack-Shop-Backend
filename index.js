@@ -91,6 +91,31 @@ app.get('/orders/:id', (req, res) => {
   res.status(404).send({error: true, message: "Order with id: " + req.params.id + " not found"});
 });
 
+app.get('/orders/summary/:id', (req, res) => {
+  let order = db.get("orders").find(order => order.id == req.params.id);
+  if(order){
+    let orderSummary = {
+      productsTotal: 0,
+      products: []
+    }
+    order.products.forEach(orderProduct => {
+      let product = db.get("products").find(product => product.id == orderProduct.productId);
+      if(product){
+        orderSummary.productsTotal += parseInt(orderProduct.quantity) * parseInt(orderProduct.price);
+        orderSummary.products.push({
+          "id": product.id,
+          "name": product.name,
+          "price": orderProduct.price,
+          "quantity": orderProduct.quantity
+        });
+      }
+    });
+
+    res.send(orderSummary);
+  }
+  res.status(404).send({error: true, message: "Order with id: " + req.params.id + " not found"});
+});
+
 app.post('/orders/new', (req, res) => {
   let order = {
     "id" : uuid.v4(),
