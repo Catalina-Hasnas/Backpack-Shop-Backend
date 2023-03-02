@@ -1,23 +1,22 @@
-# Welcome to Backpack Shop 👋
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000)
+# Backpack Shop App
 
-> This is a Node js api app for linen and hemp backpacks
+Backpack Shop is an e-commerce. It features a REST api with CRUD operations on products. The database is using a text file for saving the data. 
 
-## Install
+To run the Backpack Shop App locally, follow these steps:
 
-```sh
-npm install
-```
+### `git clone`
 
-## Usage
+Clone the repository to your local machine.
 
-```sh
-npm start
-```
+### `npm install`
 
+Install the required dependencies using npm install.
 
-## Author
+### `npm start`
 
-👤 **Cătălina Hasnaș**
+Runs the server in the development mode.\
+Open [http://localhost:8000](http://localhost:8000) to view it in the browser and make requests. For example: [http://localhost:8000/products/](http://localhost:8000/products/) 
 
-* Github: [@Catalina-Hasnas](https://github.com/Catalina-Hasnas)
+## Technologies on backend
+* node.js
+* express.js
